@@ -1,7 +1,7 @@
 from Pangram import is_pangram
 
 
-def test_is_pangram():
+def test_is_pangram() -> None:
     assert is_pangram("hello", "helo")
     assert not is_pangram("hello", "hel")
     assert not is_pangram("hello", "helow")
