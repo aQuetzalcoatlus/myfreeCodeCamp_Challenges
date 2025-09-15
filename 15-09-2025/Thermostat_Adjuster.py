@@ -11,7 +11,6 @@ Given the current temperature of a room and a target temperature, return a strin
 def adjust_thermostat(temp: float, target: float) -> str:
     is_cool = temp < target
     is_warm = temp > target
-    is_perfect = temp == target
 
     if is_cool:
         return 'heat'
