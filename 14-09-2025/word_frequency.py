@@ -9,21 +9,22 @@ Given a paragraph, return an array of the three most frequently occurring words.
 
 """
 
+
 def get_words(para: str) -> str:
     """
     Remove punctuation - ".", ",", "!"
     Turn to lower case for better count
     """
     # remove punctuation
-    para = para.replace(',', '')
-    para = para.replace('.', '')
-    para = para.replace('!', '')
+    para = para.replace(",", "")
+    para = para.replace(".", "")
+    para = para.replace("!", "")
 
     # convert to lower case
     para = para.lower()
 
     # get all words
-    words_list: list = para.split(' ')
+    words_list: list = para.split(" ")
     words_list.sort()
 
     # get unique words
@@ -36,14 +37,17 @@ def get_words(para: str) -> str:
     for unique_word in unique_words:
         word_occurences[unique_word] = words_list.count(unique_word)
 
-    sorted_dict_desc = dict(sorted(word_occurences.items(), key=lambda item: item[1], reverse=True))
+    sorted_dict_desc = dict(
+        sorted(word_occurences.items(), key=lambda item: item[1], reverse=True)
+    )
     print(sorted_dict_desc)
 
-    top3_words: list = list (sorted_dict_desc.keys())[:3]
+    top3_words: list = list(sorted_dict_desc.keys())[:3]
 
     return top3_words
 
-if __name__=='__main__':
+
+if __name__ == "__main__":
     test_paragraph: str = "I like coding. I like testing. I love debugging!"
 
     print(get_words(test_paragraph))
