@@ -34,8 +34,6 @@ def check_special_chars(password: str) -> bool:
 
 
 def check_strength(password: str) -> str:
-    # strength_levels: list[str] = ["weak", "medium", "strong"]
-
     all_checks: list[bool] = [
         check_length(password),
         check_cases(password),
