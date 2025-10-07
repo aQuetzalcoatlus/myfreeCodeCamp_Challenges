@@ -1,4 +1,6 @@
 """
+NOTE: This was somewhat confusing in wording.
+
 Space Week Day 4: Landing Spot
 
 In day four of Space Week, you are given a matrix of numbers (an array of arrays), representing potential landing spots for your rover. Find the safest landing spot based on the following rules:
