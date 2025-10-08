@@ -24,17 +24,17 @@ For today's challenge, you are given the surface temperature of a star in Kelvin
 """
 
 
-def classify_star(temp):
+def classification(temp):
     ranges = [
-        (30000, "O"),
-        (10000, "B"),
-        (7500, "A"),
-        (6000, "F"),
-        (5200, "G"),
-        (3700, "K"),
-        (0, "M"),
+        (30000, float("inf"), "O"),
+        (10000, 29999, "B"),
+        (7500, 9999, "A"),
+        (6000, 7499, "F"),
+        (5200, 5999, "G"),
+        (3700, 5199, "K"),
+        (0, 3699, "M"),
     ]
 
-    for lower, cls in ranges:
-        if temp >= lower:
+    for lower, upper, cls in ranges:
+        if lower <= temp <= upper:
             return cls
