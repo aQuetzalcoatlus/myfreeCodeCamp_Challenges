@@ -45,7 +45,7 @@ def hex_to_decimal(hex_string: str) -> int:
             The decimal representation of the number.
 
     """
-    if type(hex_string) is not str:
+    if not isinstance(hex_string, str):
         raise TypeError("The input should be a string")
     hex_individuals: list[str] = [str(i) for i in range(10)] + [
         alpha for alpha in "ABCDEF"
