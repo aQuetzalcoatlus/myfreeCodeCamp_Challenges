@@ -1,0 +1,5 @@
+/<\w+\s(\w+)="(\w+)"><\/\w*>/
+---
+<span class="red"></span>
+<meta charset="UTF-8" />
+---
