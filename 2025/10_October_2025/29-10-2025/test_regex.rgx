@@ -1,0 +1,6 @@
+^\w*@(\w+).com
+---
+jill@mail.com
+john@example.com
+jane@example.com
+---
